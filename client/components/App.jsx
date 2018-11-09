@@ -1,5 +1,4 @@
 import React from 'react'
-import {getAllCountries} from '../api'
 import Months from './Months'
 
 class App extends React.Component {
@@ -21,37 +20,22 @@ class App extends React.Component {
       return
     }
 
-    console.log('searchYear', searchYear)
     if (searchYear === String(this.state.year)) {
       alert('Same year!')
       return
     }
 
     this.setState({year: searchYear})
-    console.log('getele===>', searchYear)
-  }
-
-  componentDidMount () {
-    // let today = new Date()
-    // // let dd = today.getDate()
-    // // let mm = today.getMonth() + 1
-    // let year = today.getFullYear()
-    // this.setState({year: year})
-
-    // console.log('currentYear------>', year)
   }
 
   render () {
     var indexYear = this.state.year
-    console.log('333333indexYear', indexYear)
-
     return (
       <div>
-
-        {/* <Month isLogin={loginStatus}/> */}
+        <div><h1>{indexYear}</h1></div>
         <div className="row">
           <div className="col-sm-4"> <input type="text" id="yearInput" className="form-control" /></div>
-          <div className="col-sm-4"> <button type="button" className="btn btn-primary" onClick={this.changeYear}> Searching this year</button></div>
+          <div className="col-sm-4"> <button type="button" className="btn btn-primary" onClick={this.changeYear}>Searching the year</button></div>
           <div className="col-sm-4"> </div>
         </div>
 

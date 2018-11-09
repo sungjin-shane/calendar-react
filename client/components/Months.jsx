@@ -1,5 +1,4 @@
 import React from 'react'
-import moment from 'moment'
 import {getAllCountries} from '../api'
 import Week from './Week'
 
@@ -14,57 +13,34 @@ class Month extends React.Component {
     this.renderWeeks = this.renderWeeks.bind(this)
   }
 
-  // getData (searchIndex) {
-  //   getAllCountries(searchIndex)
-  //     .then(monthData => {
-  //     // console.log(monthData)
-  //       this.setState({monthData})
-  //     })
-  // }
-
   componentDidMount () {
     let {
       indexYear,
       indexMonth
     } = this.props
 
-    console.log('indexYear1-------', indexYear)
     let searchIndex = String(indexYear).concat(String(indexMonth))
-    console.log('searchIndex-------', searchIndex)
 
     getAllCountries(searchIndex)
       .then(monthData => {
-        // console.log(monthData)
         this.setState({monthData})
       })
-
-    console.log('componentDidMount')
   }
 
   componentDidUpdate (prevProps, prevState) {
-    // if (prevState.path !== this.state.path) {
-    //   let firebaseRef = firebase.database().ref(this.state.path)
-    //   this.setState({firebaseRef})
-    //   this.getData(firebaseRef)
-    // }
-
     if (this.props.indexYear !== prevProps.indexYear) {
       let {
         indexYear,
         indexMonth
       } = this.props
 
-      console.log('indexYear1-------', indexYear)
       let searchIndex = String(indexYear).concat(String(indexMonth))
-      console.log('searchIndex-------', searchIndex)
 
       getAllCountries(searchIndex)
         .then(monthData => {
-        // console.log(monthData)
           this.setState({monthData})
         })
     }
-    console.log('componentDidUpdate')
   }
 
   renderWeeks () {
@@ -94,8 +70,6 @@ class Month extends React.Component {
       cnt++
     })
 
-    console.log('last_tmpMonth', tmpMonth)
-
     return (
       <Week key={tmpMonth}
         date={tmpMonth}
@@ -105,11 +79,8 @@ class Month extends React.Component {
 
   render () {
     let {
-      indexYear,
       indexMonth
     } = this.props
-
-    console.log('renderingwww', this.props)
 
     let label = ''
     switch (indexMonth) {
@@ -152,9 +123,6 @@ class Month extends React.Component {
       default:
         label = 'N/A'
     }
-
-    // let indexMonth = indexDate.substr(0, 2)
-    // let indexYear = indexDate.substr(2, 4)
 
     return (
       <div>

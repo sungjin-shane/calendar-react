@@ -1,5 +1,4 @@
 import React from 'react'
-import {getAllCountries} from '../api'
 
 class Day extends React.Component {
   constructor (props) {
@@ -24,7 +23,6 @@ class Day extends React.Component {
   }
 
   isToday (day) {
-    console.log('ffffffffffffffff', this.state.today)
     if (day === String(this.state.today)) {
       return true
     } return false
@@ -35,7 +33,6 @@ class Day extends React.Component {
   }
 
   render () {
-    console.log('day===>', this.props)
     let {
       day
     } = this.props
