@@ -99,7 +99,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.getAllCountries = getAllCountries;
+exports.getAllDate = getAllDate;
 
 var _superagent = __webpack_require__(/*! superagent */ "./node_modules/superagent/lib/client.js");
 
@@ -107,10 +107,8 @@ var _superagent2 = _interopRequireDefault(_superagent);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function getAllCountries(searchIndex) {
-  console.log('api.searchIndex', searchIndex);
+function getAllDate(searchIndex) {
   return _superagent2.default.get('/v1/calendar/' + searchIndex).then(function (res) {
-    //console.log(res.body.rows)
     return res.body.rows;
   }).catch(function (err) {
     // eslint-disable-next-line no-console
@@ -199,6 +197,7 @@ var App = function (_React$Component) {
           _react2.default.createElement(
             'h1',
             null,
+            'Shanes Calendar ',
             indexYear
           )
         ),
@@ -514,7 +513,7 @@ var Month = function (_React$Component) {
 
       var searchIndex = String(indexYear).concat(String(indexMonth));
 
-      (0, _api.getAllCountries)(searchIndex).then(function (monthData) {
+      (0, _api.getAllDate)(searchIndex).then(function (monthData) {
         _this2.setState({ monthData: monthData });
       });
     }
@@ -531,7 +530,7 @@ var Month = function (_React$Component) {
 
         var searchIndex = String(indexYear).concat(String(indexMonth));
 
-        (0, _api.getAllCountries)(searchIndex).then(function (monthData) {
+        (0, _api.getAllDate)(searchIndex).then(function (monthData) {
           _this3.setState({ monthData: monthData });
         });
       }

@@ -1,5 +1,5 @@
 import React from 'react'
-import {getAllCountries} from '../api'
+import {getAllDate} from '../api'
 import Week from './Week'
 
 class Month extends React.Component {
@@ -21,7 +21,7 @@ class Month extends React.Component {
 
     let searchIndex = String(indexYear).concat(String(indexMonth))
 
-    getAllCountries(searchIndex)
+    getAllDate(searchIndex)
       .then(monthData => {
         this.setState({monthData})
       })
@@ -36,7 +36,7 @@ class Month extends React.Component {
 
       let searchIndex = String(indexYear).concat(String(indexMonth))
 
-      getAllCountries(searchIndex)
+      getAllDate(searchIndex)
         .then(monthData => {
           this.setState({monthData})
         })

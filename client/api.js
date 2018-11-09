@@ -1,11 +1,9 @@
 import request from 'superagent'
 
-export function getAllCountries (searchIndex) {
-  console.log('api.searchIndex', searchIndex)
+export function getAllDate (searchIndex) {
   return request
     .get('/v1/calendar/' + searchIndex)
     .then(res => {
-      //console.log(res.body.rows)
       return res.body.rows
     })
     .catch(err => {

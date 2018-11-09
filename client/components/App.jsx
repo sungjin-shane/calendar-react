@@ -32,7 +32,7 @@ class App extends React.Component {
     var indexYear = this.state.year
     return (
       <div>
-        <div><h1>{indexYear}</h1></div>
+        <div><h1>Shanes Calendar {indexYear}</h1></div>
         <div className="row">
           <div className="col-sm-4"> <input type="text" id="yearInput" className="form-control" /></div>
           <div className="col-sm-4"> <button type="button" className="btn btn-primary" onClick={this.changeYear}>Searching the year</button></div>

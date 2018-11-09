@@ -4,8 +4,6 @@ const router = express.Router()
 
 router.get('/:searchIndex', (req, res) => {
   const searchIndex = req.params.searchIndex
-  console.log('searchIndex', searchIndex)
-  
   db.getAll(searchIndex)
     .then(calendar => {
       res.json(calendar)
