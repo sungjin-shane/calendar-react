@@ -109,8 +109,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function getAllCountries(searchIndex) {
   console.log('api.searchIndex', searchIndex);
-  return _superagent2.default.get('/v1/worldcup/' + searchIndex).then(function (res) {
-    // console.log(res.body.rows)
+  return _superagent2.default.get('/v1/calendar/' + searchIndex).then(function (res) {
+    //console.log(res.body.rows)
     return res.body.rows;
   }).catch(function (err) {
     // eslint-disable-next-line no-console
