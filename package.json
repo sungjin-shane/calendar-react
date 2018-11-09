@@ -5,8 +5,9 @@
   "author": "sungjin-shane <sjpark731015@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon server --watch server & webpack --watch"
-  },
+    "dev": "nodemon server --watch server & webpack --watch",
+    "start": "node server",
+    "postinstall": "webpack && knex migrate:latest"  },
   "babel": {
     "presets": [
       "env",
@@ -17,9 +18,7 @@
     "body-parser": "^1.18.3",
     "pg": "^7.4.3",
     "superagent": "^3.8.3",
-    "webpack": "^4.12.1"
-  },
-  "devDependencies": {
+    "webpack": "^4.12.1",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.7.0",
