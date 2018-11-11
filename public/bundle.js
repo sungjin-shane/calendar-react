@@ -393,35 +393,35 @@ var Day = function (_React$Component) {
             'div',
             { className: 'col-md-1' },
             ' ',
-            this.isToday(day[0]) ? '★'.concat(String(day[5]).substr(0, 2)) : String(day[0]).substr(0, 2),
+            this.isToday(day[0]) ? '★'.concat(String(day[0]).substr(0, 2)) : String(day[0]).substr(0, 2),
             ' '
           ),
           _react2.default.createElement(
             'div',
             { className: 'col-md-1' },
             ' ',
-            this.isToday(day[1]) ? '★'.concat(String(day[5]).substr(0, 2)) : String(day[1]).substr(0, 2),
+            this.isToday(day[1]) ? '★'.concat(String(day[1]).substr(0, 2)) : String(day[1]).substr(0, 2),
             ' '
           ),
           _react2.default.createElement(
             'div',
             { className: 'col-md-1' },
             ' ',
-            this.isToday(day[2]) ? '★'.concat(String(day[5]).substr(0, 2)) : String(day[2]).substr(0, 2),
+            this.isToday(day[2]) ? '★'.concat(String(day[2]).substr(0, 2)) : String(day[2]).substr(0, 2),
             ' '
           ),
           _react2.default.createElement(
             'div',
             { className: 'col-md-1' },
             ' ',
-            this.isToday(day[3]) ? '★'.concat(String(day[5]).substr(0, 2)) : String(day[3]).substr(0, 2),
+            this.isToday(day[3]) ? '★'.concat(String(day[3]).substr(0, 2)) : String(day[3]).substr(0, 2),
             ' '
           ),
           _react2.default.createElement(
             'div',
             { className: 'col-md-1' },
             ' ',
-            this.isToday(day[4]) ? '★'.concat(String(day[5]).substr(0, 2)) : String(day[4]).substr(0, 2),
+            this.isToday(day[4]) ? '★'.concat(String(day[4]).substr(0, 2)) : String(day[4]).substr(0, 2),
             ' '
           ),
           _react2.default.createElement(
@@ -435,7 +435,7 @@ var Day = function (_React$Component) {
             'div',
             { className: 'col-md-1' },
             ' ',
-            this.isToday(day[6]) ? '★'.concat(String(day[5]).substr(0, 2)) : String(day[6]).substr(0, 2),
+            this.isToday(day[6]) ? '★'.concat(String(day[6]).substr(0, 2)) : String(day[6]).substr(0, 2),
             ' '
           )
         )
